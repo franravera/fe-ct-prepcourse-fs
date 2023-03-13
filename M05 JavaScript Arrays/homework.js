@@ -2,35 +2,49 @@
 
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
-   // Tu código:
+   // Tu código: 
+      return array[0]
 }
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
+   return array [array.length -1]
 }
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
+   return array.length
 }
 
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
+   var masuno = array.map ((num) => {
+    return  num +1;
+   }); return masuno
+    
+   
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   array.push(elemento);
+   return array;
+
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   array.unshift(elemento);
+   return array;
+
 }
 
 function dePalabrasAFrase(palabras) {
@@ -39,24 +53,41 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
+   return palabras.join(' ');
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
-   // Tu código:
+   // Tu código: 
+   return array.includes(elemento);
+
 }
 
-function agregarNumeros(arrayOfNums) {
+function agregarNumeros(arrayOfNums) { // [2, 7 ,10] 
+// 3 elementos, indice 2 (0,1,2)
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   var suma =0
+   for (var i = 0; i< arrayOfNums.length; i++) {
+    suma= suma + arrayOfNums[i];
+   //primer vuelta suma= 0+2(2 represenra al (arrayOfnum[i] en la primer vuelta del bucle) ahora suma vale 2)
+   //segunda vuelta suma=2+7 (7 representa el indice 1 del ArrayOfnum en la segunda vuelta )  entonces suma ahora vale 9
+   //tercer vuelta suma= 9+10 (10 representa el indice 2 del ArrayOfnum[i] en la tercer vuelta)
+   //entonces suma=19 seria el resultado de toda la suma del ARRAY (fin del bucle)
+   } return suma;
 }
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var promedio = 0
+   for(var i= 0; i<resultadosTest.length; i++) {
+      promedio= promedio+resultadosTest[i];
+
+   } return promedio / resultadosTest.length; 
 }
 
 function numeroMasGrande(arrayOfNums) {
